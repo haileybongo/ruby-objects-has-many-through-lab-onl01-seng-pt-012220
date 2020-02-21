@@ -18,7 +18,7 @@ class Doctor
   end
   
   def songs 
-    Song.all.select {|song| song.artist == self}
+    Appointment.all.select {|appt| appt.doctor == self}
   end
   
   def genres 
