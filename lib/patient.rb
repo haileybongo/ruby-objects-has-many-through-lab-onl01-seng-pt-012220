@@ -23,11 +23,10 @@ class Patient
     end
     
     def doctors
-      artists = []
-      self.songs.each do |song|
-      artists << song.artist
+      self.appointments.each do |appt|
+      patients << appt.patient
      end
-      artists
+    patients
      end
      
    end
