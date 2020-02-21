@@ -19,8 +19,8 @@ class Genre
     
     def artists
       artists = []
-       self.song.each do |song|
-        artists << song.artist
+      self.songs.each do |song|
+      artists << song.artist
      end
       artists
      end
