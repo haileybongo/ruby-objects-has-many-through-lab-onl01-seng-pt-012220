@@ -17,16 +17,16 @@ class Doctor
     Appointment.new(patient, date, self)
   end
   
-  def songs 
+  def appointments 
     Appointment.all.select {|appt| appt.doctor == self}
   end
   
-  def genres 
-    genres = []
-    self.songs.each do |song|
-      genres << song.genre
+  def patients 
+    patients = []
+    self.appointments.each do |appt|
+      patients << appt.patient
     end
-    genres
+    patients
   end
   
 end
